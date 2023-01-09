@@ -31,3 +31,16 @@ def rotate_array(array, k):
     for i in range(k):
         element = array.pop(0)
         array.append(element)
+        
+ #function to alternate the case of the characters in the string
+ def alternate_case(text):
+    result = ""
+    for i in range(len(text)):
+        char = text[i]
+        if char.isupper():
+            result += char.lower()
+        else:
+            char.islower()
+            result += char.upper()
+
+    return result
