@@ -1,0 +1,33 @@
+#function that takes a number and returns an array of its digits.
+def return_array(number):
+    c = str(number)
+    emt_list = []
+    for i in range(len(c)):
+        emt_list.append(int(c[i]))
+    return emt_list
+    
+    
+# function that translates a text to Pig Latin and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word, and adding "ay".
+def to_pig_latin(text):
+    words = text.split()
+    pig_latin_words = []
+    for i in words:
+        pig_latin_word = i[1:] + i[0] + "ay"
+        pig_latin_words.append(pig_latin_word)
+    return " ".join(pig_latin_words)
+    
+def from_pig_latin(text):
+    words = text.split()
+    english_words = []
+    for i in words:
+        english_word = i[-3] + i[:-3]
+        english_words.append(english_word)
+    return " ".join(english_words)
+    
+# function that rotates an array by k elements
+def rotate_array(array, k):
+    n = len(array)
+    k = k % n
+    for i in range(k):
+        element = array.pop(0)
+        array.append(element)
